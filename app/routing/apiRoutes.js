@@ -1,4 +1,4 @@
-//var friendsArray = require("../data/friends.js");
+//handles api calls
 
 function apiRoutes(){
 
@@ -12,15 +12,12 @@ function apiRoutes(){
 
 	}
 
+	//use the index attached in findMin middleware and return the json corresponding to the ith element in array. add the user to friendList.
 	this.postFriends = function (app, array) {
 
 		app.post("/api/friends", function(req, res){
 
 			var index = res.selectedperson;
-
-			console.log(index);
-
-			var score = req.body.score
 
 			array.push(req.body);
 

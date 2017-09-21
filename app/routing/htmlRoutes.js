@@ -1,3 +1,5 @@
+//handles serving html files
+
 var path = require("path");
 
 function htmlRoutes(){
@@ -6,10 +8,7 @@ function htmlRoutes(){
 
 		app.get("/*", function(req, res){
 
-			//res.end("show html file..");
-
 			var route = req.originalUrl;
-			//console.log(route);
 
 			if (route === "/survey") {
 
